@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_mandol"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/point_fp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@color/blue_mandol"
+            android:paddingEnd="16dp"
+            android:text="1045 Pts"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:background="@color/blue_mandol"-->
+<!--                app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/app_bar"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="140dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/app_bar_title"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="22sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/points"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="60dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="1025 Pts"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </androidx.appcompat.widget.Toolbar>-->
+
+<!--        </LinearLayout>-->
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/title_activity_mission"
+        app:srcCompat="@drawable/quest" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

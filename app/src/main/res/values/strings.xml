@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Gamification BETA</string>
+
+    <string name="title_activity_auteurs">Merchant</string>
+    <string name="title_activity_category">Voucher</string>
+    <string name="title_activity_favorites">Favoritku</string>
+    <string name="title_activity_quotes">Redeem</string>
+    <string name="title_activity_quote">Voucher</string>
+    <string name="title_activity_rateus">Pencapaian</string>
+    <string name="title_activity_splash">Splash Activity</string>
+    <string name="title_activity_redeem_his">Redeem History</string>
+    <string name="title_activity_rewards">Rewards</string>
+    <string name="title_activity_mission">Misi</string>
+    <string name="title_about">About</string>
+    <string name="ratethisapp_msg">If you like this app.Please take a moment to rate it. It would\'t take more than a minute.\nEnjoy!</string>
+    <string name="ratethisapp_title">Rate Us</string>
+    <string name="about_msg">We proudly presents our BETA prototypes.\n\n\nGamification On Mandiri Online\nBy Alpha Team </string>
+    <string name="btn_ok">OK</string>
+    <string name="copy_msg">The quote has been copied to clipboard</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_add_to_favorites">Tambah  Favorites</string>
+    <string name="quote_of_day">Quote of the day</string>
+    <string name="action_share">Share</string>
+    <string name="rate_it">Rate it</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Cari</string>
+    <string name="share">Share via</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_user_setting">Settings</string>
+    <string name="speaker_enable">Reader</string>
+    <string name="notif">Notifikasi</string>
+    <string name="pref_update_setting">Umum</string>
+    <string name="pref_other">Other</string>
+    <string name="pref_user_time">Time of the day</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="btn_quotes">Redeem</string>
+    <string name="btn_authors">Merchant</string>
+    <string name="btn_favorites">Favoritku</string>
+    <string name="btn_categories">Voucher</string>
+    <string name="btn_qteday">Riwayat Redeem</string>
+    <string name="btn_rateus">Pencapaian</string>
+    <string name="btn_LoadMore">Lebih banyak...</string>
+
+    <!-- SETTINGS -->
+    <string name="banner_ad_unit_id">-</string>
+    <string name="interstitial_ad_unit_id">-</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Nicholas Nainggolan</string>
+    <string name="nav_header_subtitle">Cashless Maniac</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home"><b>mandiri</b> online</string>
+    <string name="menu_profile">Profil Saya</string>
+    <string name="menu_gallery">Pengaturan</string>
+    <string name="menu_slideshow">Status Transaksi</string>
+    <string name="menu_tools">Suku Bunga</string>
+    <string name="menu_share">Bantuan</string>
+    <string name="menu_send">Tentang Mandiri Online</string>
+    <string name="menu_call">Hubungi Kami</string>
+    <string name="menu_logout">Logout</string>
+
+    <string name="app_bar_title"><b>mandiri</b> online</string>
+    <string name="button_transfer">transfer</string>
+    <string name="button_bayar">bayar</string>
+    <string name="button_beli">beli</string>
+    <string name="button_emoney">emoney</string>
+    <string name="button_transaksi_tertunda">transaksi tertunda</string>
+    <string name="button_favorit">favorit</string>
+    <string name="button_linkaja">link Aja</string>
+    <string name="button_rewards">rewards</string>
+
+    <string name="tab_giro">REKENING GIRO &amp; TABUNGAN</string>
+    <string name="point"></string>
+</resources>
