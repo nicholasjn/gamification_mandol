@@ -17,6 +17,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.ActionBar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,16 +62,6 @@ public class MainActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        /*
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        recyclerView.setHasFixedSize(true);
-        recyclerView = (RecyclerView) findViewById(R.id.account_type);
-        // specify an adapter (see also next example)
-        mAdapter = new AccountTypeListAdapter(myDataset);
-        recyclerView.setAdapter(mAdapter);
-         */
-
         btn_rewards = (ImageButton) findViewById(R.id.rewards);
         btn_rewards.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +82,14 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         actionBar.setTitle(getResources().getText(R.string.app_bar_title));
+
+
+        recyclerView = findViewById(R.id.account_type);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        String[] acctype = {"Tabungan", "Giro"};
+        mAdapter = new AccountTypeListAdapter(this, acctype);
+        recyclerView.setAdapter(mAdapter);
 
     }
 

@@ -128,6 +128,7 @@
         app:srcCompat="@drawable/rewards" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/account_type"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_left"

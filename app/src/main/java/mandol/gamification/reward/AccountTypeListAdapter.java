@@ -1,47 +1,51 @@
 package mandol.gamification.reward;
 
+import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class AccountTypeListAdapter extends RecyclerView.Adapter<AccountTypeListAdapter.MyViewHolder> {
-    private String[] mDataset;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        public TextView textView;
-        public MyViewHolder(TextView v) {
-            super(v);
-            textView = v;
-        }
+public class AccountTypeListAdapter extends RecyclerView.Adapter<AccountTypeListAdapter.ViewHolder> {
+    private String[] mDataset;
+    private LayoutInflater mInflater;
+    private ArrayList<String> mData;
+
+    public AccountTypeListAdapter(Context context, ArrayList<String> data){
+        this.mInflater = LayoutInflater.from(context);
+        this.mData = data;
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public AccountTypeListAdapter(String[] myDataset) {
-        mDataset = myDataset;
+    public AccountTypeListAdapter(Context context, String[] myDataset) {
+        this.mInflater = LayoutInflater.from(context);
+        this.mDataset = myDataset;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public AccountTypeListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                     int viewType) {
+    public AccountTypeListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        TextView view = (TextView) mInflater.inflate(R.layout.account_type_item, parent, false);
+        return new ViewHolder(view);
+        /*
         // create a new view
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.account_item, parent, false);
+                .inflate(R.layout.account_type_item, parent, false);
 
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
+        */
     }
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         holder.textView.setText(mDataset[position]);
@@ -52,5 +56,17 @@ public class AccountTypeListAdapter extends RecyclerView.Adapter<AccountTypeList
     @Override
     public int getItemCount() {
         return mDataset.length;
+    }
+
+    // Provide a reference to the views for each data item
+    // Complex data items may need more than one view per item, and
+    // you provide access to all the views for a data item in a view holder
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        public TextView textView;
+        public ViewHolder(TextView v) {
+            super(v);
+            textView = v;
+        }
     }
 }
