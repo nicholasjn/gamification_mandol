@@ -515,14 +515,14 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     // Updating single quote
 
-    public int updatePoint(int point) {
+    public int updatePoint(int point, int id, int pointOld) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put("point", point);
+        values.put("point", point+pointOld);
         // updating row
-        return db.update(TABLE_QUOTES, values, "cifno = 1",
-                new String[] { String.valueOf(point) });
+        return db.update("user_profile", values, "cifno = ?",
+                new String[] { String.valueOf(id) });
 
     }
 

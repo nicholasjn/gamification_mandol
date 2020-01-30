@@ -5,10 +5,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.speech.tts.TextToSpeech;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -94,6 +100,7 @@ public class QuoteActivity extends AppCompatActivity implements
         textQuote.setTypeface(fontQuote);
         textQuote.setTextSize(18);
         textAuth.setTypeface(fontAuth);
+
 
         if(mode.equals("qteday")){
             qte = db.getQuote(ID);
@@ -200,7 +207,7 @@ public class QuoteActivity extends AppCompatActivity implements
         boolean isExist = false;
         InputStream imageStream = null;
         try {
-            imageStream = getAssets().open("authors/"+qte.getFileName()+".jpg");
+            imageStream = getAssets().open("voucher/"+qte.getName()+".png");
 
             isExist =true;
         } catch (IOException e) {
@@ -211,8 +218,9 @@ public class QuoteActivity extends AppCompatActivity implements
 
         if (isExist != false){
             Bitmap theImage = BitmapFactory.decodeStream(imageStream);
-            roundedImage = new RoundImage(theImage);
-            imgIcon.setImageDrawable(roundedImage );
+//            roundedImage = new RoundImage(theImage);
+//            imgIcon.setImageDrawable(roundedImage);
+            imgIcon.setImageBitmap(theImage);
         }
         else {
             Bitmap bm = BitmapFactory.decodeResource(getResources(),R.mipmap.author);

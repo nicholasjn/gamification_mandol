@@ -88,7 +88,7 @@ public class MisiListAdapter extends ArrayAdapter<Misi> {
             public void onClick(View v) {
                 CharSequence msg = "Reward telah di klaim";
                 Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
-//                db.updatePoint(1);
+                db.updatePoint(1,1, db.getPoints(1));
             }
         });
 

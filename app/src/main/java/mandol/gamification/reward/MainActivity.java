@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
+    private TextView point;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
         actionBar.setTitle(getResources().getText(R.string.app_bar_title));
 
+        point = findViewById(R.id.point_fp);
+        point.setText(String.valueOf(db.getPoints(1)));
 
         recyclerView = findViewById(R.id.account_type);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

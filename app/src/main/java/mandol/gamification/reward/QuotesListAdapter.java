@@ -83,7 +83,7 @@ public class QuotesListAdapter extends ArrayAdapter<Quote> {
         AssetManager assetManager = context.getAssets();
         InputStream imageStream = null;
         try {
-            imageStream = assetManager.open("authors/"+picture.getFileName()+".jpg");
+            imageStream = assetManager.open("voucher/"+picture.getName()+".png");
 
             isExist =true;
         } catch (IOException e) {
@@ -109,6 +109,5 @@ public class QuotesListAdapter extends ArrayAdapter<Quote> {
         TextView txtTitle;
         TextView txtQuote;
         TextView txtCategory;
-
     }
 }
