@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.account_type);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        String[] acctype = {"Tabungan", "Giro"};
+        String[] acctype = {"REKENING GIRO & TABUNGAN", "TABUNGAN RENCANA"};
         mAdapter = new AccountTypeListAdapter(this, acctype);
         recyclerView.setAdapter(mAdapter);
 

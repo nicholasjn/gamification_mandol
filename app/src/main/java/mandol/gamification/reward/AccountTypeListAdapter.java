@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.lang.reflect.Array;
@@ -31,7 +32,7 @@ public class AccountTypeListAdapter extends RecyclerView.Adapter<AccountTypeList
     // Create new views (invoked by the layout manager)
     @Override
     public AccountTypeListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        TextView view = (TextView) mInflater.inflate(R.layout.account_type_item, parent, false);
+        View view = mInflater.inflate(R.layout.account_type_item, parent, false);
         return new ViewHolder(view);
         /*
         // create a new view
@@ -48,7 +49,7 @@ public class AccountTypeListAdapter extends RecyclerView.Adapter<AccountTypeList
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.textView.setText(mDataset[position]);
+        holder.cv_title.setText(mDataset[position]);
 
     }
 
@@ -63,10 +64,14 @@ public class AccountTypeListAdapter extends RecyclerView.Adapter<AccountTypeList
     // you provide access to all the views for a data item in a view holder
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView textView;
-        public ViewHolder(TextView v) {
+        public CardView cv;
+        public TextView cv_title;
+        public View account;
+
+        public ViewHolder(View v) {
             super(v);
-            textView = v;
+            cv = v.findViewById(R.id.cv_account);
+            cv_title = v.findViewById(R.id.cv_title);
         }
     }
 }
