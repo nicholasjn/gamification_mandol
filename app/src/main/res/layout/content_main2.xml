@@ -127,16 +127,16 @@
         app:layout_constraintTop_toBottomOf="@+id/emoney"
         app:srcCompat="@drawable/rewards" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/account_type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linkaja"></androidx.recyclerview.widget.RecyclerView>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/account_type"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="12dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linkaja"></androidx.recyclerview.widget.RecyclerView>-->
 
     <!--    <include-->
 <!--        layout="@layout/account_type_item"-->
@@ -152,44 +152,84 @@
 <!--        />-->
 
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/cv_account"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="@dimen/margin_left"-->
-<!--        android:layout_marginEnd="@dimen/margin_right"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/linkaja"-->
-<!--        app:cardCornerRadius="6dp">-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_left"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkaja"
+        app:cardCornerRadius="6dp">
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:divider="@color/gray"-->
-<!--            android:dividerPadding="1dp"-->
-<!--            android:orientation="vertical">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray"
+            android:dividerPadding="1dp"
+            android:orientation="vertical">
 
-<!--            <TextView-->
-<!--                android:id="@+id/cv_title"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:paddingStart="16dp"-->
-<!--                android:paddingTop="8dp"-->
-<!--                android:paddingBottom="8dp"-->
-<!--                android:background="@color/white_gray"-->
-<!--                android:text="@string/tab_giro"-->
-<!--                android:textSize="@dimen/cv_title_font" />-->
+            <TextView
+                android:id="@+id/cv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/white_gray"
+                android:text="@string/tab_giro"
+                android:textSize="@dimen/cv_title_font" />
 
-<!--            <include-->
-<!--                layout="@layout/account_product"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@color/white" />-->
+            <include
+                layout="@layout/account_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
 
-<!--        </LinearLayout>-->
+        </LinearLayout>
 
-<!--    </androidx.cardview.widget.CardView>-->
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_account2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_left"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_account"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray"
+            android:dividerPadding="1dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cv_title2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/white_gray"
+                android:text="TABUNGAN RENCANA"
+                android:textSize="@dimen/cv_title_font" />
+
+            <include
+                layout="@layout/account_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

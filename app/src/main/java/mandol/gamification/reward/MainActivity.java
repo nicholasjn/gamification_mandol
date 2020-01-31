@@ -84,12 +84,14 @@ public class MainActivity extends AppCompatActivity {
         point = findViewById(R.id.point_fp);
         point.setText(new String("Point: " + db.getPoints(1)));
 
+        /*
         recyclerView = findViewById(R.id.account_type);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         String[] acctype = {"REKENING GIRO & TABUNGAN", "TABUNGAN RENCANA"};
         mAdapter = new AccountTypeListAdapter(this, acctype);
         recyclerView.setAdapter(mAdapter);
+        */
 
     }
 
