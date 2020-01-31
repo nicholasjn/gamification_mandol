@@ -48,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-//        TextView point = (TextView) findViewById(getResources().getLayout(getAttributeName(R.id.point_fp)));
-//        point.setText(db.getPoints(1));
-
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle(getResources().getText(R.string.app_bar_title));
 
         point = findViewById(R.id.point_fp);
-        point.setText(String.valueOf(db.getPoints(1)));
+        point.setText(new String("Point: " + db.getPoints(1)));
 
         recyclerView = findViewById(R.id.account_type);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -108,5 +105,11 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        point = findViewById(R.id.point_fp);
+        point.setText(new String("Point: " + db.getPoints(1)));
     }
 }
